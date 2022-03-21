@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    // "jsx": "preserve",
+    "jsx": "react",
+    "allowJs": true,
+    // "module": "ESNext",
+    // "target": "es2016",
+    "sourceMap": false,
+    "lib": ["esnext", "dom"],
+    "types": ["jest", "node"],
+    "esModuleInterop": true
+  }
+}
