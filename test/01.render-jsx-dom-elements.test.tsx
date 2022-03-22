@@ -2,16 +2,15 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createElement, render } from '../src'
 
-describe('test createElement', () => {
+describe('test render-jsx-dom-elements', () => {
   let root
   beforeEach(() => {
-    root = document.createElement('div')
-    document.body.appendChild(root)
-  })
-
-  afterEach(() => {
-    root.innerHTML = ''
-    document.body.removeChild(root)
+    root = document.querySelector('#app')
+    if (!root) {
+      root = document.createElement('div')
+      root.id = 'app'
+      document.body.appendChild(root)
+    }
   })
 
   test('render jsx div', () => {

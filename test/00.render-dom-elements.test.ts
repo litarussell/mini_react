@@ -1,14 +1,14 @@
 import { render } from '../src'
 
-describe('test render', () => {
+describe('test render-dom-elements', () => {
   let root
   beforeEach(() => {
-    root = document.createElement('div')
-    document.body.appendChild(root)
-  })
-  afterEach(() => {
-    root.innerHTML = ''
-    document.body.removeChild(root)
+    root = document.querySelector('#app')
+    if (!root) {
+      root = document.createElement('div')
+      root.id = 'app'
+      document.body.appendChild(root)
+    }
   })
 
   test('render div', () => {
@@ -58,20 +58,4 @@ describe('test render', () => {
     render(element, root)
     expect(root.innerHTML).toBe('<span>Foo</span>')
   })
-
-  // test('render span with text child', () => {
-  //   const element = {
-  //     type: 'span',
-  //     props: {
-  //       children: [
-  //         {
-  //           type: 'TEXT ELEMENT',
-  //           props: { nodeValue: 'Foo' },
-  //         },
-  //       ],
-  //     },
-  //   }
-  //   render(element, root)
-  //   expect(root.innerHTML).toBe('<span>Foo</span>')
-  // })
 })

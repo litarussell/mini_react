@@ -13,3 +13,5 @@ export {
   // Component,
   render,
 }
+
+(window as any).render = render
