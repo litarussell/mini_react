@@ -4,28 +4,26 @@ module.exports = {
   // plugins: [
   //   '@typescript-eslint',
   // ],
+  globals: {},
   extends: [
     '@litarussell/eslint-config-ts',
   ],
+  overrides: [
+    {
+      files: ['*.test.tsx'],
+      rules: {
+        'no-undef': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            varsIgnorePattern: 'createElement',
+          },
+        ],
+      },
+    },
+  ],
 
   rules: {
-    // 'no-unused-vars': [
-    //   'error',
-    //   { varsIgnorePattern: '.*', args: 'none' }
-    // ],
     'no-console': 'warn',
-    // "no-undef": [
-    //   'error',
-    //   {
-    //     "typeof": true
-    //   }
-    // ]
-
-    // "no-global-assign": [
-    //   "error",
-    //   {
-    //     "exceptions": ["Object"]
-    //   }
-    // ],
   },
 }

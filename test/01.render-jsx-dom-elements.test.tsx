@@ -1,5 +1,4 @@
 /** @jsx createElement */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { createElement, render } from '../src'
 
 describe('test render-jsx-dom-elements', () => {

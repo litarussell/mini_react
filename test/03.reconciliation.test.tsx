@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /** @jsx createElement */
 import { createElement, render } from '../src'
 
