@@ -1,16 +1,16 @@
 import { createElement } from './element'
-// import Component from './component';
+import Component from './component'
 import { render } from './reconciler'
 
 export default {
   createElement,
-  // Component,
+  Component,
   render,
 }
 
 export {
   createElement,
-  // Component,
+  Component,
   render,
 }
 

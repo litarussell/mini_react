@@ -1,9 +1,4 @@
-/* eslint-env node */
 module.exports = {
-  // parser: '@typescript-eslint/parser',
-  // plugins: [
-  //   '@typescript-eslint',
-  // ],
   globals: {},
   extends: [
     '@litarussell/eslint-config-ts',
@@ -25,5 +20,6 @@ module.exports = {
 
   rules: {
     'no-console': 'warn',
+    'new-cap': ['error', { newIsCap: false }],
   },
 }
